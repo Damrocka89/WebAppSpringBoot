@@ -4,7 +4,7 @@ package io.github.mat3e.lang;
     private Integer id;
     private String code;
 
-    public LangDTO(Lang lang) {
+     LangDTO(Lang lang) {
         this.id = lang.getId();
         this.code = lang.getCode();
     }

@@ -1,11 +1,13 @@
-package io.github.mat3e.lang;
+package io.github.mat3e.todo;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LangRepository extends JpaRepository<Lang, Integer> {
+interface TodoRepository extends JpaRepository<Todo, Integer> {
+
+
 
 
 }

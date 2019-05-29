@@ -1,15 +1,14 @@
 package io.github.mat3e.lang;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 class LangService {
 
     private LangRepository repository;
-
-    LangService() {
-        this(new LangRepository());
-    }
 
     LangService(LangRepository repository) {
         this.repository = repository;
@@ -17,7 +16,8 @@ class LangService {
 
 
     List<LangDTO> findAll() {
-        return repository.findAll()
+        return repository
+                .findAll()
                 .stream()
                 .map(LangDTO::new)
                 .collect(Collectors.toList());
